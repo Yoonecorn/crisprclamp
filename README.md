@@ -10,6 +10,22 @@ including paired-end dual-guide screens. It reports raw counts and read classes.
 It does not perform downstream statistical inference, hit calling, or biological
 interpretation. This repository provides the counting CLI and no graphical app.
 
+## Performance
+
+CrisprClamp is built to count ordered guide pairs quickly, with predictable
+memory use.
+
+In our tests on one Apple M4 Pro workstation, CrisprClamp was faster than the
+other guide-counting tools we compared, on the datasets we tested.
+
+We also tested CrisprClamp on a synthetic workload of 10 billion paired reads,
+run as 20 shards.
+
+The memory budget is a planning check. It is not a hard limit. These results
+come from single runs on one machine, so your results may differ.
+
+Details are in the CrisprClamp manuscript (link to be added).
+
 ## Requirements
 
 Apple Silicon macOS is the only tested platform. Install a Rust toolchain with
