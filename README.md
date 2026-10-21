@@ -1,5 +1,7 @@
 # CrisprClamp
 
+Paper: docs/CrisprClamp_manuscript.pdf
+
 ## What CrisprClamp does
 
 CrisprClamp counts guide sequences and expected guide pairs from FASTQ input,
