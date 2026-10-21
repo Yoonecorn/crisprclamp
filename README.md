@@ -24,7 +24,7 @@ run as 20 shards.
 The memory budget is a planning check. It is not a hard limit. These results
 come from single runs on one machine, so your results may differ.
 
-Details are in the CrisprClamp manuscript (link to be added).
+Details are in the CrisprClamp manuscript ([docs/CrisprClamp_manuscript.pdf](docs/CrisprClamp_manuscript.pdf)).
 
 ## Requirements
 
@@ -89,4 +89,4 @@ See [LICENSE-MIT](LICENSE-MIT) and [LICENSE-APACHE](LICENSE-APACHE).
 
 [GitHub Issues](https://github.com/Yoonecorn/crisprclamp/issues)
 
-The manuscript link will be added.
+The manuscript is in [docs/CrisprClamp_manuscript.pdf](docs/CrisprClamp_manuscript.pdf). The user manual is in [docs/CrisprClamp_User_Manual.pdf](docs/CrisprClamp_User_Manual.pdf).
