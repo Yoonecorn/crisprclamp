@@ -1780,7 +1780,7 @@ fn science(
                 "semantic_configuration_sha256":format!("{:x}",Sha256::digest(serde_json::to_vec(&config).map_err(|e|e.to_string())?)),
                 "physical_inputs":physical_inputs,"canonical_decoded_input_digest_scheme":"project-c.record-stream.v1: four u64 big-endian lengths and logical line bytes per record",
                 "canonical_decoded_input_sha256":decoded_hashes,"decoded_bytes":decoded_bytes,
-                "software_build_identity":{"package":"project-c-engine","version":env!("CARGO_PKG_VERSION")},
+                "software_build_identity":{"package":env!("CARGO_PKG_NAME"),"version":env!("CARGO_PKG_VERSION")},
                 "requested_backend":"serial-scalar","executed_backend":"serial-scalar",
                 "discovery_selector":discovery_json,"evidence_selector":cfg.evidence.selector(),"deterministic_artifacts":artifacts
             }),

@@ -67,6 +67,9 @@ Tested with Rust 1.98.0.
 
 ## Installation
 
+The current source release is v0.1.1. The Cargo package and executable are both
+named `crisprclamp`.
+
 Build from source. Run from the repository root:
 
 ```sh
@@ -144,7 +147,7 @@ expected counts and read classes.
 
 ## Citation
 
-Yap, Yoon Sing. CrisprClamp, version 0.1.0. GitHub repository, 2026.
+Yap, Yoon Sing. CrisprClamp, version 0.1.1. GitHub repository, 2026.
 
 The [project manuscript](docs/CrisprClamp_manuscript.pdf) describes the method
 and its evaluation.

@@ -1682,7 +1682,7 @@ fn standard_execution(
     }
     let mut record = json!({"schema_id":"project-c.run-metadata.v1", "execution_profile":"standard",
         "execution_id":format!("{}-{}",std::process::id(),state.started),"sample_id":sample,
-        "software_build_identity":{"package":"project-c-engine","version":env!("CARGO_PKG_VERSION")},
+        "software_build_identity":{"package":env!("CARGO_PKG_NAME"),"version":env!("CARGO_PKG_VERSION")},
         "semantic_contract_id":semantic_contract,"semantic_configuration":configuration,"inputs":inputs.iter().enumerate().map(|(i,p)|json!({"role":if i==0{"R1"}else{"R2"},"path":p.to_string_lossy(),
             "encoding":if p.extension().is_some_and(|x|x=="gz"){"gzip"}else{"plain"},
             "bytes":fs::metadata(p).map_or(json!({"unavailable":"metadata_error"}),|m|json!(m.len()))})).collect::<Vec<_>>(),
@@ -2235,7 +2235,7 @@ fn science(
             "semantic_configuration_sha256":format!("{:x}",Sha256::digest(serde_json::to_vec(&config).map_err(|e| e.to_string())?)),
             "physical_inputs":[physical],"canonical_decoded_input_digest_scheme":"project-c.record-stream.v1: four u64 big-endian lengths and logical line bytes per record",
             "canonical_decoded_input_sha256":decoded_hash,"decoded_bytes":decoded_bytes,
-            "software_build_identity":{"package":"project-c-engine","version":env!("CARGO_PKG_VERSION")},
+            "software_build_identity":{"package":env!("CARGO_PKG_NAME"),"version":env!("CARGO_PKG_VERSION")},
             "requested_backend":"serial-scalar","executed_backend":"serial-scalar",
             "discovery_selector":discovery_json,"evidence_selector":cfg.evidence.selector(), "deterministic_artifacts":artifacts
         }),
